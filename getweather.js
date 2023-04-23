@@ -1,9 +1,13 @@
 let weather = {
     "apiKey": "a50a6aa72826ea7cb650f0f6a023e931",
-    fetchWeather: function(city){
+    fetchWeather: function(city, state, country){
         fetch(
         "https://api.openweathermap.org/data/2.5/weather?q="
         + city 
+        +","
+        + state
+        +","
+        + country
         + "&appid=" + this.apiKey 
         + "&units=imperial"
         )
@@ -31,7 +35,7 @@ let weather = {
         "url('https://source.unsplash.com/1600x900/?" + name + "')";
     },
     search: function () {
-        this.fetchWeather(document.querySelector(".search-bar").value);
+        this.fetchWeather(document.querySelector(".search-bar").value, document.querySelector(".search-bar-state").value, document.querySelector(".search-bar-country").value);
       },
 };
 

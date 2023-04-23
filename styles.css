@@ -15,7 +15,7 @@ body{
 }
 .card{
     width: 90%;
-    max-width: 500px;
+    max-width: 1000px;
     background: linear-gradient(135deg, #871F78, lemonchiffon);
     color: #fff;
     margin: 100px auto 0;
@@ -41,7 +41,9 @@ body{
     margin-right: 16px;
     font-size: 18px;
     background: #ebfffc;
+    width: 100%;
 }
+
 .search button{
     border: 0;
     outline: 0;
